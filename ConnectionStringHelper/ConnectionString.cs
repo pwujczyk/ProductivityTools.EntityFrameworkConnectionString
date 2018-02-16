@@ -35,8 +35,15 @@ namespace ConnectionStringHelper
             var connection = GetDataSource(datasource).AddIntegratedSecurity().AddInitialCatalog(databaseName);
             return connection.ToString();
         }
-
-        private static string GetSqlEntityFrameworkConnectionString(string datasource, string databaseName, string metadataName)
+        
+        /// <summary>
+        /// Returns connection string which is needed for EntityFramework
+        /// </summary>
+        /// <param name="datasource"></param>
+        /// <param name="databaseName"></param>
+        /// <param name="metadataName"></param>
+        /// <returns></returns>
+        public static string GetSqlEntityFrameworkConnectionString(string datasource, string databaseName, string metadataName)
         {
             var connection = GetDataSource(datasource).AddIntegratedSecurity().AddInitialCatalog(databaseName);
             var r = GetEntityConnectionStringBuilder()
