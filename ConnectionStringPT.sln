@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionStringHelper", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionStringHelperTests", "ConnectionStringHelperTests\ConnectionStringHelperTests.csproj", "{265F0FF2-6A18-4C0A-B66B-FF273EE28D59}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CE5985E0-A5CA-46F5-86AA-DEA4BE3D1E30}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NugetMetadata.nuspec = .nuget\NugetMetadata.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

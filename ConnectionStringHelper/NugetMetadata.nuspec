@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ConnectionStringHelperPT</id>
+    <version>0.0.1</version>
+    <title>ConnectionStringHelper</title>
+    <authors>Pawel Wujczyk</authors>
+    <owners>Pawel Wujczyk</owners>
+    <projectUrl>http://www.productivitytools.tech/connectionstringhelper/</projectUrl>
+    <description>Couple methods which allows to generate connection string in Code. It genreates connection string without database name (for database creation) with database, for CRUD operations, and entity framework connection string with all metadata.</description>
+    <tags>Connection String EntityFramework</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>
