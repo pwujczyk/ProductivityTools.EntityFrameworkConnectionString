@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data.Entity.Core.EntityClient;
 
-namespace ConnectionStringHelper
+namespace ConnectionStringPT
 {
     public static class ConnectionString
     {
@@ -20,7 +20,7 @@ namespace ConnectionStringHelper
         /// <returns></returns>
         public static string GetSqlDataSourceConnectionString(string dataSource)
         {
-            return GetSQLDataSource(dataSource).ToString();
+            return ConnectionStringLightPT.ConnectionStringLight.GetSqlDataSourceConnectionString(dataSource);
         }
 
         /// <summary>
@@ -32,8 +32,7 @@ namespace ConnectionStringHelper
         /// <returns></returns>
         public static string GetSqlServerConnectionString(string datasource, string databaseName)
         {
-            var connection = GetDataSource(datasource).AddIntegratedSecurity().AddInitialCatalog(databaseName);
-            return connection.ToString();
+            return ConnectionStringLightPT.ConnectionStringLight.GetSqlServerConnectionString(datasource, databaseName);
         }
         
         /// <summary>
@@ -45,7 +44,7 @@ namespace ConnectionStringHelper
         /// <returns></returns>
         public static string GetSqlEntityFrameworkConnectionString(string datasource, string databaseName, string metadataName)
         {
-            var connection = GetDataSource(datasource).AddIntegratedSecurity().AddInitialCatalog(databaseName);
+            var connection = GetSqlServerConnectionString(datasource, databaseName);
             var r = GetEntityConnectionStringBuilder()
                 .AddProviderName(SQLClientProviderName)
                 .InitEntityBuilder(connection)
@@ -58,17 +57,17 @@ namespace ConnectionStringHelper
             return new EntityConnectionStringBuilder();
         }
 
-        private static EntityConnectionStringBuilder InitEntityBuilder(this EntityConnectionStringBuilder entityBuilder, SqlConnectionStringBuilder sqlBuilder)
+        private static EntityConnectionStringBuilder InitEntityBuilder(this EntityConnectionStringBuilder entityBuilder, string sqlBuilder)
         {
             entityBuilder.ProviderConnectionString = sqlBuilder.ToString();
             return entityBuilder;
         }
 
-        private static SqlConnectionStringBuilder GetSQLDataSource(string dataSource)
-        {
-            var r = GetDataSource(dataSource).AddIntegratedSecurity();
-            return r;
-        }
+        //private static SqlConnectionStringBuilder GetSQLDataSource(string dataSource)
+        //{
+        //    var r = GetDataSource(dataSource).AddIntegratedSecurity();
+        //    return r;
+        //}
 
         private static EntityConnectionStringBuilder AddProviderName(this EntityConnectionStringBuilder entityBuilder, string providerName)
         {
@@ -82,24 +81,24 @@ namespace ConnectionStringHelper
             return entityBuilder;
         }
 
-        private static SqlConnectionStringBuilder GetDataSource(string dataSource)
-        {
-            SqlConnectionStringBuilder sqlBuilder = new SqlConnectionStringBuilder();
-            sqlBuilder.DataSource = dataSource;
-            return sqlBuilder;
-        }
+        //private static SqlConnectionStringBuilder GetDataSource(string dataSource)
+        //{
+        //    SqlConnectionStringBuilder sqlBuilder = new SqlConnectionStringBuilder();
+        //    sqlBuilder.DataSource = dataSource;
+        //    return sqlBuilder;
+        //}
 
-        private static SqlConnectionStringBuilder AddIntegratedSecurity(this SqlConnectionStringBuilder connectionStringBuilder)
-        {
-            connectionStringBuilder.IntegratedSecurity = true;
-            return connectionStringBuilder;
-        }
+        //private static SqlConnectionStringBuilder AddIntegratedSecurity(this SqlConnectionStringBuilder connectionStringBuilder)
+        //{
+        //    connectionStringBuilder.IntegratedSecurity = true;
+        //    return connectionStringBuilder;
+        //}
 
 
-        private static SqlConnectionStringBuilder AddInitialCatalog(this SqlConnectionStringBuilder connectionStringBuilder, string initialCatalog)
-        {
-            connectionStringBuilder.InitialCatalog = initialCatalog;
-            return connectionStringBuilder;
-        }
+        //private static SqlConnectionStringBuilder AddInitialCatalog(this SqlConnectionStringBuilder connectionStringBuilder, string initialCatalog)
+        //{
+        //    connectionStringBuilder.InitialCatalog = initialCatalog;
+        //    return connectionStringBuilder;
+        //}
     }
 }
