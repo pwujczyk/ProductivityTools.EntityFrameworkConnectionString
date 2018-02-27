@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0"?>
 <package >
   <metadata>
-    <id>ConnectionStringPTPT</id>
-    <version>0.0.2S</version>
+    <id>ConnectionStringPT</id>
+    <version>0.0.1</version>
     <title>ConnectionStringPT</title>
     <authors>Pawel Wujczyk</authors>
     <owners>Pawel Wujczyk</owners>

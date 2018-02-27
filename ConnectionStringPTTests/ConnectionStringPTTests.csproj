@@ -55,7 +55,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConnectionStringHelper\ConnectionStringHelper.csproj">
+    <ProjectReference Include="..\ConnectionStringPT\ConnectionStringPT.csproj">
       <Project>{c8fbd1ac-9605-4be3-9429-9fe18f383a6e}</Project>
       <Name>ConnectionStringHelper</Name>
     </ProjectReference>
