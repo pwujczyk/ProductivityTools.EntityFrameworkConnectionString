@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionStringPT", "ConnectionStringPT\ConnectionStringPT.csproj", "{C8FBD1AC-9605-4BE3-9429-9FE18F383A6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.ConnectionString", "ProductivityTools.ConnectionString\ProductivityTools.ConnectionString.csproj", "{C8FBD1AC-9605-4BE3-9429-9FE18F383A6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CE5985E0-A5CA-46F5-86AA-DEA4BE3D1E30}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NugetMetadata.nuspec = .nuget\NugetMetadata.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionStringPTTests", "ConnectionStringPTTests\ConnectionStringPTTests.csproj", "{265F0FF2-6A18-4C0A-B66B-FF273EE28D59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.ConnectionString.Tests", "ProductivityTools.ConnectionString.Tests\ProductivityTools.ConnectionString.Tests.csproj", "{265F0FF2-6A18-4C0A-B66B-FF273EE28D59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

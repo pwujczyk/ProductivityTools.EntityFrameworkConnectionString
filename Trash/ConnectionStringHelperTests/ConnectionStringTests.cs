@@ -1,8 +1,8 @@
 ﻿using System;
-using ConnectionStringPT;
+using ConnectionStringHelper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ConnectionStringPTTests
+namespace ConnectionStringHelperTests
 {
     [TestClass]
     public class ConnectionStringTests
