@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/40526787/create-connection-string-during-installation/48873423#48873423
+https://stackoverflow.com/questions/45475331/dynamiclly-creating-a-connection-string-for-a-database-created-using-c-sharp/48873021#48873021
+https://stackoverflow.com/questions/21729967/how-do-i-create-connection-string-programmatically-to-ms-sql-in-entity-framework/48840702#48840702
